@@ -1,5 +1,6 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { MedicamentoModule } from './medicamento/medicamento.module';
 
 
 @Module({
@@ -14,6 +15,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
     synchronize: true, 
    
   }),
+  MedicamentoModule,
 ],
  controllers: [],
   providers: [],
