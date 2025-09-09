@@ -1,17 +1,18 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { MedicamentoModule } from './medicamento/medicamento.module';
+import { MedicamentoModule } from './medicamentos/medicamento.module';
+import { Medicamento } from './medicamentos/entities/medicamento.entity';
 
 
 @Module({
   imports: [TypeOrmModule.forRoot({
     type: 'mysql',
     host: 'localhost',
-    port:  3306,
+    port: 3306,
     username: 'root',
     password: '7800',
     database: 'db_farmacia',
-    entities: [],
+    entities: [Medicamento],
     synchronize: true, 
    
   }),
